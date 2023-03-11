@@ -1,0 +1,98 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://www.surfertoday.com/images/stories/physical-world-map.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+
+}
+
+.quiz-area {
+
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    align-self: stretch;
+
+    margin: auto;
+}
+
+.title {
+
+    font-size: 1.7rem;
+    align-self: center;
+    color: whitesmoke;
+
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    background: rgba(34, 34, 34, 0.16);
+    justify-content: space-evenly;
+    align-content: space-around;
+    gap: 20px 20px;
+    align-self: center;
+    align-items: stretch;
+    padding: 20px;
+    border-radius: 20px;
+
+
+}
+
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transition: all .5s linear;
+    transform-style: preserve-3d;
+}
+
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.front {
+    background: linear-gradient(#41037e, #960a74);
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    z-index: 1;
+    background: linear-gradient(#b7c36d, #ebcfaa);
+    transform: rotateY(180deg);
+    color: darkslategray;
+
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.flex-box {
+    perspective: 2000px;
+}
